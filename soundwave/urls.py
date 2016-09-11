@@ -17,4 +17,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^mail/', include('mail.urls', namespace='mail')),
+    url(r'^learning/', include('learning.urls', namespace='learning'))
 ]
